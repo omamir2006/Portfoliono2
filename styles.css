@@ -3,9 +3,9 @@
 :root {
     --bg-dark: #222020;
     --card-placeholder: #2e2c2c;
-    --text-white: #ffffff;
-    --text-muted: #cccccc;
-    --border-line: #ffffff;
+    --text-white: #fff;
+    --text-muted: #ccc;
+    --border-line: #fff;
 }
 
 * {
@@ -15,28 +15,21 @@
     font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-    background-color: var(--bg-dark);
+    background: var(--bg-dark);
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-a {
-    color: var(--text-white);
-    text-decoration: none;
-}
+a { color: var(--text-white); text-decoration: none; }
 
-/* Top Navbar & Decorative Top-Left Line */
+/* Top Navbar */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; left: 0; width: 100%;
     padding: 2.2rem 5%;
     display: flex;
     justify-content: space-between;
@@ -47,9 +40,8 @@ a {
 }
 
 .top-line-accent {
-    width: 32%;
-    height: 2px;
-    background-color: var(--border-line);
+    width: 32%; height: 2px;
+    background: var(--border-line);
     margin-left: -5%;
 }
 
@@ -68,9 +60,7 @@ a {
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-    color: var(--text-white);
-}
+.nav-links a:hover { color: var(--text-white); }
 
 .hamburger {
     display: none;
@@ -80,12 +70,11 @@ a {
 }
 
 .hamburger span {
-    width: 25px;
-    height: 2px;
-    background-color: var(--text-white);
+    width: 25px; height: 2px;
+    background: var(--text-white);
 }
 
-/* Slide Section Base */
+/* Base Slides & Decor */
 .slide-section {
     position: relative;
     min-height: 100vh;
@@ -101,362 +90,155 @@ a {
     width: 100%;
 }
 
-/* Slide Decorative Elements (3 Dots & Bottom Right Line) */
 .dots-decor {
     position: absolute;
-    bottom: 45px;
-    left: 6%;
-    display: flex;
-    gap: 12px;
+    bottom: 45px; left: 6%;
+    display: flex; gap: 12px;
 }
 
 .dots-decor span {
-    width: 14px;
-    height: 14px;
+    width: 14px; height: 14px;
     border-radius: 50%;
-    background-color: #d9d9d9;
+    background: #d9d9d9;
 }
 
 .bottom-right-line {
     position: absolute;
-    bottom: 45px;
-    right: 0;
-    width: 34%;
-    height: 2px;
-    background-color: var(--border-line);
+    bottom: 45px; right: 0;
+    width: 34%; height: 2px;
+    background: var(--border-line);
 }
 
-/* Headings */
+/* Headings & Placeholders */
 .section-heading {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    line-height: 1.05;
-    margin-bottom: 2rem;
+    font-size: 4rem; font-weight: 800;
+    letter-spacing: 1px; text-transform: uppercase;
+    line-height: 1.05; margin-bottom: 2rem;
 }
 
-.center-heading {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+.center-heading, .center-content { text-align: center; }
+.center-heading { margin-bottom: 3rem; }
 
-/* Placeholder Image Styling (Looks clean even before images are added) */
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background-color: var(--card-placeholder);
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    background: var(--card-placeholder);
     color: var(--text-muted);
-    font-size: 0.85rem;
-    text-align: center;
+    font-size: 0.85rem; text-align: center;
 }
 
-/* 1. Cover Section */
-.center-content {
-    text-align: center;
-}
-
-.giant-title {
-    font-size: 5.5rem;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
+/* 1. Cover */
+.giant-title { font-size: 5.5rem; font-weight: 800; letter-spacing: 3px; }
 .subtitle {
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: var(--text-muted);
-    letter-spacing: 4px;
+    font-size: 1.4rem; font-weight: 300;
+    color: var(--text-muted); letter-spacing: 4px;
     margin-top: 0.5rem;
 }
 
-/* 2. About Me Layout (Slide 2.jpg) */
+/* 2. About Me */
 .split-about {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    gap: 4rem;
-    align-items: center;
+    display: grid; grid-template-columns: 1fr 1.25fr;
+    gap: 4rem; align-items: center;
 }
 
 .circle-img-wrapper {
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 420px; height: 420px;
+    border-radius: 50%; overflow: hidden;
     margin: 0 auto;
-    background-color: var(--card-placeholder);
+    background: var(--card-placeholder);
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.circle-img-wrapper img {
-    object-position: 50% 15%;
-}
+.circle-img-wrapper img { object-position: 50% 15%; }
 
 .about-right p {
-    font-size: 1.05rem;
-    font-weight: 300;
+    font-size: 1.05rem; font-weight: 300;
     color: var(--text-muted);
-    margin-bottom: 1.4rem;
-    line-height: 1.65;
+    margin-bottom: 1.4rem; line-height: 1.65;
 }
 
-/* 3. Education Layout (Slide 3.png) */
-.edu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2.8rem;
-    margin-top: 1rem;
-}
+/* 3. Education */
+.edu-list { display: flex; flex-direction: column; gap: 2.8rem; margin-top: 1rem; }
+.edu-row { display: grid; grid-template-columns: 1fr 240px; align-items: center; gap: 3rem; }
+.edu-text { text-align: center; max-width: 760px; margin: 0 auto; }
 
-.edu-row {
-    display: grid;
-    grid-template-columns: 1fr 240px;
-    align-items: center;
-    gap: 3rem;
-}
-
-.edu-text {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.edu-text h3, .edu-text h4, .edu-text p {
-    font-size: 1.35rem;
-    font-weight: 700;
-    line-height: 1.45;
-    color: var(--text-white);
+.edu-text :is(h3, h4, p) {
+    font-size: 1.35rem; font-weight: 700;
+    line-height: 1.45; color: var(--text-white);
 }
 
 .edu-logo-box {
-    width: 145px;
-    height: 145px;
-    margin-left: auto;
-    background-color: var(--card-placeholder);
+    width: 145px; height: 145px; margin-left: auto;
+    background: var(--card-placeholder);
     border: 1px dashed rgba(255, 255, 255, 0.2);
 }
+.edu-logo-box.wide-box { width: 230px; height: 125px; }
 
-.edu-logo-box.wide-box {
-    width: 230px;
-    height: 125px;
-}
-
-/* 4. Work Experience Layout (Slide 5.jpg) */
+/* 4. Experience */
 .split-experience {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
+    display: grid; grid-template-columns: 1.15fr 1fr;
+    gap: 3.5rem; align-items: center;
 }
 
-.exp-collage-left {
-    display: grid;
-    grid-template-columns: 0.9fr 1fr 1.15fr;
-    gap: 10px;
-    min-height: 550px;
-}
-
-.exp-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+.exp-collage-left { display: grid; grid-template-columns: 0.9fr 1fr 1.15fr; gap: 10px; min-height: 550px; }
+.exp-col { display: flex; flex-direction: column; gap: 10px; }
 
 .exp-col img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: contain;
-    background-color: #1a1818;
-    border-radius: 4px;
-    margin-bottom: 8px;
+    width: 100%; height: auto; max-height: 220px;
+    object-fit: contain; background: #1a1818;
+    border-radius: 4px; margin-bottom: 8px;
 }
 
-.exp-text-right .section-heading {
-    margin-bottom: 1.8rem;
-}
+.exp-text-right .section-heading { margin-bottom: 1.8rem; }
+.projects-wrapper { text-align: center; }
+.projects-label { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem; }
 
-.projects-wrapper {
-    text-align: center;
-}
+.project-block { margin-bottom: 1.8rem; }
+.project-block h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; }
+.project-block p { font-size: 1rem; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
 
-.projects-label {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 0.2rem;
-}
+/* 5. Samples & Results */
+.samples-grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.sample-card { background: #fff; padding: 10px; border-radius: 2px; min-height: 380px; display: flex; flex-direction: column; }
+.sample-card img { flex: 1; background: var(--card-placeholder); object-fit: contain; }
 
-.project-block {
-    margin-bottom: 1.8rem;
-}
-
-.project-block h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
-}
-
-.project-block p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text-muted);
-    line-height: 1.5;
-}
-
-/* 5. Copywriting Samples & Results Layout (Slide 6.jpg) */
-.samples-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.sample-card {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 2px;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-}
-
-.sample-card img {
-    flex: 1;
-    background-color: var(--card-placeholder);
-    object-fit: contain;
-}
-
-/* Results Section: Wide Banner Cards for Dashboard Tables */
-.results-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+.results-grid { display: flex; flex-direction: column; gap: 20px; }
 .result-card {
-    background-color: #1a1818;
-    padding: 15px;
-    border-radius: 6px;
+    background: #1a1818; padding: 15px; border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 320px;
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; min-height: 320px;
 }
+.result-card img { width: 100%; height: auto; max-height: 450px; object-fit: contain; background: transparent; }
 
-.result-card img {
-    width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: contain;
-    background-color: transparent;
-}
+/* 6. Outro */
+.outro-container { display: flex; flex-direction: column; justify-content: center; min-height: 70vh; }
+.outro-statement { text-align: center; max-width: 1050px; margin: 0 auto; }
+.outro-statement p { font-size: 2rem; font-weight: 800; line-height: 1.38; letter-spacing: 0.5px; text-transform: uppercase; }
 
-/* 6. Contact / Outro Layout (Slide 7.png) */
-.outro-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 70vh;
-}
+.contact-box-bottom-right { margin-top: 5rem; margin-left: auto; text-align: center; padding-right: 2rem; }
+.contact-box-bottom-right :is(h4, p) { font-size: 1.25rem; font-weight: 700; line-height: 1.5; }
 
-.outro-statement {
-    text-align: center;
-    max-width: 1050px;
-    margin: 0 auto;
-}
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+.fade-in.appear { opacity: 1; transform: translateY(0); }
 
-.outro-statement p {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1.38;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.contact-box-bottom-right {
-    margin-top: 5rem;
-    margin-left: auto;
-    text-align: center;
-    padding-right: 2rem;
-}
-
-.contact-box-bottom-right h4,
-.contact-box-bottom-right p {
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-/* Scroll Fade Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Media Queries */
+/* Responsive */
 @media (max-width: 992px) {
-    .split-about,
-    .split-services,
-    .split-experience,
-    .edu-row {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .edu-logo-box {
-        margin: 0 auto;
-    }
-
-    .circle-img-wrapper {
-        width: 300px;
-        height: 300px;
-    }
-
-    .section-heading {
-        font-size: 2.8rem;
-        text-align: center;
-    }
-
-    .outro-statement p {
-        font-size: 1.4rem;
-    }
-
-    .contact-box-bottom-right {
-        margin: 3rem auto 0;
-        padding-right: 0;
-    }
-
-    .top-line-accent {
-        display: none;
-    }
-
+    :is(.split-about, .split-services, .split-experience, .edu-row) { grid-template-columns: 1fr; text-align: center; }
+    .edu-logo-box { margin: 0 auto; }
+    .circle-img-wrapper { width: 300px; height: 300px; }
+    .section-heading { font-size: 2.8rem; text-align: center; }
+    .outro-statement p { font-size: 1.4rem; }
+    .contact-box-bottom-right { margin: 3rem auto 0; padding-right: 0; }
+    
+    .top-line-accent { display: none; }
+    
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-dark);
-        padding: 2rem 0;
-        text-align: center;
+        display: none; flex-direction: column;
+        position: absolute; top: 70px; left: 0; width: 100%;
+        background: var(--bg-dark); padding: 2rem 0; text-align: center;
     }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-        margin-left: auto;
-    }
+    .nav-links.active { display: flex; }
+    .hamburger { display: flex; margin-left: auto; }
 }
